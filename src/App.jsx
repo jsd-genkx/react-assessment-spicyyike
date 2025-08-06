@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "./components/Layout";
-import Home from "./views/Home";
+import {Home} from "./views/Home";
 import Owner from "./views/Owner";
 
 const router = createBrowserRouter([{
@@ -23,7 +23,7 @@ element: <Layout />,
 
 export default function App() {
   return (
-    <div className="min-h-screen flex justify-center bg-gray-300 w-full">
+    <div className="min-h-screen flex justify-center bg-gray-200 w-full">
       <RouterProvider router={router} />
     </div>
   );
