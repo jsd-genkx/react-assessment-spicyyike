@@ -3,7 +3,7 @@ import User from '../components/User'
 import Admin from '../components/Admin';
 import axios from 'axios';
 
-export const API_URL = "https://jsd5-mock-backend.onrender.com"
+export const API_URL = "http://localhost:3000"
 
 
 export const Home = () => {
@@ -19,8 +19,8 @@ const fetchUsers = async () => {
         try {
             const res = await axios.get(`${API_URL}/members`);
             //alert("Successfully fetched data")
-            setEmployees(res.data)
-            //console.log(res.data)
+            setEmployees(res.data.members)
+            //console.log(res.data.members)
             //console.log(typeof res.data)
         } catch (error) {
             alert("Fail to fetch users")
@@ -66,7 +66,7 @@ const adminVisibility = () => {
     </div>
 
     {userVisible && <User employees={employees}/>}
-    {adminVisible && <Admin employees={employees} api={API_URL} setEmployees={setEmployees}/>}
+          {adminVisible && <Admin employees={employees} api={API_URL} setEmployees={setEmployees} fetchUsers={fetchUsers} />}
 
 
     </div>

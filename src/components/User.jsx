@@ -7,7 +7,7 @@ const User = ({employees}) => {
     <div>
 
             <div className='mx-4 my-16'>
-                <table className='w-[60%] mx-auto text-center table-fixed'>
+                <table className='w-[80%] mx-auto text-center table-fixed'>
             <thead>
                 <tr>
                 <th className="p-2 border border-gray-400 bg-gray-100">Name</th>
